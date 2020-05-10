@@ -7,5 +7,5 @@ tasks:
 - push-to-github: |-
     cd crust
     git checkout master
-    git remote set-url origin https://aaronpkelly:$GITHUB_PASS@github.com/aaronpkelly/crust
-    git push
+    git remote set-url origin git@github.com:aaronpkelly/crust.git
+    git push -u origin master
