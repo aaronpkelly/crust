@@ -1,4 +1,4 @@
-FROM rust:slim-stretch as builder
+FROM rust as builder
 WORKDIR /usr/src/myapp
 COPY . .
 RUN cargo install --path .
