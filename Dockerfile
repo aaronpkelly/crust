@@ -1,10 +1,8 @@
-FROM alpine
-RUN apk update && apk add \
-    rust
+FROM rust:1.31
 
-COPY . /app
 WORKDIR /app
+COPY . .
 
-RUN cargo build
+RUN cargo install --path .
 
-ENTRYPOINT ["./target/debug/crust"]
+ENTRYPOINT ["crust"]
