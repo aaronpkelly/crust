@@ -8,4 +8,5 @@ FROM debian:buster-slim
 # FROM alpine
 # RUN apt-get update && apt-get install -y extra-runtime-dependencies
 COPY --from=builder /usr/local/cargo/bin/crust /usr/local/bin/crust
+WORKDIR /usr/local/bin/crust
 CMD ["crust"]
